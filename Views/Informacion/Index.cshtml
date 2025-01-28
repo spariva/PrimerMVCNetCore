@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Menú Información</h1>
+<ul>
+    <li>
+        <a asp-controller="Informacion" asp-action="ControladorVista">
+            Controlador->vista
+        </a>
+    </li>
+    <li>
+        <a asp-controller="Informacion" asp-action="ControladorVistaModel">
+            Controlador->vista Model
+        </a>
+    </li>
+    <li>
+        <a asp-controller="Informacion" asp-action="VistaControllerPost">
+            Form
+        </a>
+    </li>
+    <li>
+        @Html.ActionLink("1. Texto del link: Vista Controller Get", "VistaControllerGet", "Informacion",
+        new {saludo = "hola", year= 2025})
+    </li>
+    <li>
+        @Html.ActionLink("1. Texto del link: Sin saludo", "VistaControllerGet", "Informacion",
+                 new { year = 2025 })
+    </li>
+</ul>
